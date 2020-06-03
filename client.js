@@ -12,12 +12,18 @@ const connect = function() {
 
   conn.on("connect", () => {
     console.log("connected.");
-    conn.write('KVN');
-  });
-
-  conn.on('connect', () => {
     conn.write('Name: KVN');
   });
+
+  // conn.on('connect', () => {
+  //   let x = 50;
+  //   while (x < 10000) {
+  //     setTimeout(() => {
+  //       conn.write("Move: up");
+  //     }, x);
+  //     x += 50;
+  //   };
+  // });
 
   conn.on('data', (data) => {
     console.log("from server:", data.toString());
