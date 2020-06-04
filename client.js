@@ -8,7 +8,7 @@ const connect = function() {
     port: 50541
   });
 
-  conn.setEncoding("utf8");
+
 
   conn.on("connect", () => {
     console.log("connected.");
@@ -26,7 +26,7 @@ const connect = function() {
   // });
 
   conn.on('data', (data) => {
-    console.log("from server:", data.toString());
+    console.log("Server says -> ", data.toString());
   });
 
   conn.on('end', () => {
