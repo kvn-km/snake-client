@@ -34,6 +34,12 @@ let handleUserInput = function(data) {
     connection.write("Move: right");
     connection.write("Move: right");
   }
+  if (data === "q") {
+    connection.write("Say: Sss~");
+  }
+  if (data === "e") {
+    connection.write("Say: Rrr~");
+  }
 
 
 
