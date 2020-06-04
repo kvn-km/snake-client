@@ -1,4 +1,5 @@
 let connection;
+const { moveUp, moveDown, moveRight, moveLeft } = require("./constants");
 
 const setupInput = function(conn) {
   const stdin = process.stdin;
@@ -19,20 +20,20 @@ let handleUserInput = function(data) {
     process.exit();
   }
   if (data === "w") {
-    connection.write("Move: up");
-    connection.write("Move: up");
+    connection.write(moveUp);
+    connection.write(moveUp);
   }
   if (data === "s") {
-    connection.write("Move: down");
-    connection.write("Move: down");
+    connection.write(moveDown);
+    connection.write(moveDown);
   }
   if (data === "a") {
-    connection.write("Move: left");
-    connection.write("Move: left");
+    connection.write(moveLeft);
+    connection.write(moveLeft);
   }
   if (data === "d") {
-    connection.write("Move: right");
-    connection.write("Move: right");
+    connection.write(moveRight);
+    connection.write(moveRight);
   }
   if (data === "q") {
     connection.write("Say: Sss~");
